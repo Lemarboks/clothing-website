@@ -1,14 +1,16 @@
 import { Product } from '../types';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const asset = (path: string) => `${basePath}${path}`;
+
 export const products: Product[] = [
   {
     id: '1',
     name: 'Classic T-Shirt',
     price: 29.99,
     images: {
-      'White': '/white-tee.jpg',
-      'Black': '/black-tee.jpg',
-    
+      White: asset('/white-tee.jpg'),
+      Black: asset('/black-tee.jpg'),
     },
     description: 'Comfortable cotton t-shirt perfect for everyday wear.',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -20,8 +22,8 @@ export const products: Product[] = [
     name: 'Retro Track Jacket',
     price: 89.99,
     images: {
-      'Navy': '/shared-jacket.jpg',
-      'Black': '/retro-black-2.jpg'
+      Navy: asset('/shared-jacket.jpg'),
+      Black: asset('/retro-black-2.jpg'),
     },
     description: 'Stylish retro track jacket with a timeless design.',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -33,9 +35,9 @@ export const products: Product[] = [
     name: 'Running Shorts',
     price: 39.99,
     images: {
-      'Gray': '/placeholder-shorts.jpg',
-      'Black': '/placeholder-shorts.jpg',
-      'Navy': '/placeholder-shorts.jpg'
+      Gray: asset('/retro-navy.jpg'),
+      Black: asset('/retro-black.jpg'),
+      Navy: asset('/retro-track-jacket.jpg'),
     },
     description: 'Lightweight shorts ideal for running and workouts.',
     sizes: ['S', 'M', 'L'],
@@ -47,9 +49,9 @@ export const products: Product[] = [
     name: 'Women\'s Crop Top',
     price: 24.99,
     images: {
-      'Pink': '/placeholder-crop.jpg',
-      'White': '/placeholder-crop.jpg',
-      'Black': '/placeholder-crop.jpg'
+      Pink: asset('/retro-jacket-alt.jpg'),
+      White: asset('/white-tee.jpg'),
+      Black: asset('/black-tee.jpg'),
     },
     description: 'Trendy crop top for a stylish look.',
     sizes: ['XS', 'S', 'M', 'L'],
@@ -61,14 +63,13 @@ export const products: Product[] = [
     name: 'Men\'s Hoodie',
     price: 59.99,
     images: {
-      'Gray': '/placeholder-hoodie.jpg',
-      'Black': '/placeholder-hoodie.jpg',
-      'Navy': '/placeholder-hoodie.jpg'
+      Gray: asset('/retro-black.jpg'),
+      Black: asset('/retro-black-2.jpg'),
+      Navy: asset('/retro-track-jacket.jpg'),
     },
     description: 'Comfortable hoodie for casual wear.',
     sizes: ['M', 'L', 'XL', 'XXL'],
     colors: ['Gray', 'Black', 'Navy'],
     gender: 'men',
   },
-  // Add more products as needed
 ];

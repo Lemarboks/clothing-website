@@ -20,13 +20,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-black shadow-lg border-b-2 border-orange-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <Logo />
           </Link>
 
           {/* Search Bar */}
-          <form onSubmit={handleSearch} className="flex-1 max-w-md mx-8">
+          <form onSubmit={handleSearch} className="w-full max-w-full lg:max-w-md mx-auto lg:mx-0">
             <div className="relative">
               <input
                 type="text"
@@ -57,7 +57,7 @@ export default function Header() {
             </div>
           </form>
 
-          <nav className="flex space-x-6">
+          <nav className="flex flex-wrap justify-center gap-4 lg:justify-end">
             <Link href="/" className="text-white hover:text-orange-400 font-semibold transition-colors">
               Home
             </Link>
