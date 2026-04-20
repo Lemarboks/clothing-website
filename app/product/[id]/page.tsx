@@ -6,6 +6,12 @@ import { products } from '../../data/products';
 import { useCart } from '../../components/CartContext';
 import Image from 'next/image';
 
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id,
+  }));
+}
+
 export default function ProductDetail() {
   const params = useParams();
   const router = useRouter();
