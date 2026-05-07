@@ -6,7 +6,6 @@ export async function generateStaticParams() {
     id: product.id,
   }));
 }
-
 export const dynamicParams = false;
 
 interface PageProps {

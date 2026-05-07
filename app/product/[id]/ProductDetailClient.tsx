@@ -28,7 +28,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             onClick={() => router.back()}
             className="text-orange-400 hover:text-orange-300 transition-colors"
           >
-            ← Back
+            Back
           </button>
         </div>
       </div>
