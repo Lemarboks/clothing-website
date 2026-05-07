@@ -2,13 +2,13 @@
 
 export default function ContactButtons() {
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/1234567890" // Replace with actual WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors duration-300 flex items-center justify-center w-14 h-14"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] p-4 text-[#07130b] shadow-2xl transition duration-300 hover:-translate-y-1 hover:bg-[#4df083]"
         title="Contact us on WhatsApp"
       >
         <svg
@@ -25,7 +25,7 @@ export default function ContactButtons() {
         href="https://instagram.com/streetwearco" // Replace with actual Instagram handle
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-4 rounded-full shadow-lg transition-colors duration-300 flex items-center justify-center w-14 h-14"
+        className="flex h-14 w-14 items-center justify-center border border-[#f3efe5]/25 bg-[#080808] p-4 text-[#f3efe5] shadow-2xl transition duration-300 hover:-translate-y-1 hover:bg-[#d8ff3f] hover:text-[#080808]"
         title="Follow us on Instagram"
       >
         <svg

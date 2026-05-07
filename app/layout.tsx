@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 import ContactButtons from "./components/ContactButtons";
 
 export const metadata: Metadata = {
-  title: "Street Wear Co.",
-  description: "Urban street wear fashion with customizable options and working cart",
+  title: "Sench//Store",
+  description: "Mzansi x LDN streetwear shop with editorial product drops",
 };
 
 export default function RootLayout({
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased bg-gray-900">
-      <body className="min-h-full flex flex-col bg-gray-900">
+    <html lang="en" className="h-full antialiased bg-[#080808]">
+      <body className="min-h-full flex flex-col bg-[#080808] text-[#f3efe5]">
         <CartProvider>
           <Header />
           <main className="flex-1">{children}</main>

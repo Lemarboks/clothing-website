@@ -18,26 +18,26 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-black shadow-lg border-b-2 border-orange-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 border-b border-[#f3efe5]/15 bg-[#080808]/90 shadow-2xl backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <Logo />
           </Link>
 
-          {/* Search Bar */}
           <form onSubmit={handleSearch} className="w-full max-w-full lg:max-w-md mx-auto lg:mx-0">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Search the archive..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-gray-800 text-white border border-gray-600 rounded-full px-4 py-2 pl-10 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
+                className="w-full border border-[#f3efe5]/20 bg-[#121212] px-4 py-2 pl-10 text-sm font-bold uppercase tracking-[0.08em] text-[#f3efe5] placeholder:text-[#f3efe5]/45 focus:border-[#d8ff3f] focus:outline-none"
               />
               <button
                 type="submit"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-orange-400"
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#f3efe5]/55 hover:text-[#d8ff3f]"
+                aria-label="Search"
               >
                 <svg
                   className="w-5 h-5"
@@ -57,23 +57,23 @@ export default function Header() {
             </div>
           </form>
 
-          <nav className="flex flex-wrap justify-center gap-4 lg:justify-end">
-            <Link href="/" className="text-white hover:text-orange-400 font-semibold transition-colors">
+          <nav className="flex flex-wrap justify-center gap-4 text-[0.74rem] font-black uppercase tracking-[0.12em] lg:justify-end">
+            <Link href="/" className="text-[#f3efe5]/80 transition-colors hover:text-[#d8ff3f]">
               Home
             </Link>
-            <Link href="/women" className="text-white hover:text-orange-400 font-semibold transition-colors">
+            <Link href="/women" className="text-[#f3efe5]/80 transition-colors hover:text-[#d8ff3f]">
               Women
             </Link>
-            <Link href="/men" className="text-white hover:text-orange-400 font-semibold transition-colors">
+            <Link href="/men" className="text-[#f3efe5]/80 transition-colors hover:text-[#d8ff3f]">
               Men
             </Link>
-            <Link href="/products" className="text-white hover:text-orange-400 font-semibold transition-colors">
-              All Products
+            <Link href="/products" className="text-[#f3efe5]/80 transition-colors hover:text-[#d8ff3f]">
+              Archive
             </Link>
-            <Link href="/cart" className="text-white hover:text-orange-400 font-semibold transition-colors relative">
+            <Link href="/cart" className="relative text-[#f3efe5]/80 transition-colors hover:text-[#d8ff3f]">
               Cart
               {itemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-orange-500 text-black text-xs font-bold rounded-full px-2 py-1">
+                <span className="absolute -right-3 -top-3 bg-[#d8ff3f] px-2 py-1 text-xs font-black text-[#080808]">
                   {itemCount}
                 </span>
               )}

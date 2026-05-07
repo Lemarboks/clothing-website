@@ -5,18 +5,19 @@ export default function Women() {
   const womenProducts = products.filter(product => product.gender === 'women' || product.gender === 'unisex');
 
   return (
-    <div className="min-h-screen bg-gray-900 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-white text-center mb-4 street-shadow">
-          Women&apos;s Collection
-        </h1>
-        <p className="text-gray-300 text-center mb-12 text-lg">
-          Discover our curated selection for women.
-        </p>
+    <div className="editorial-grid min-h-screen px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 border-y border-[#f3efe5]/20 py-6">
+          <p className="kicker mb-3">Womenswear edit</p>
+          <h1 className="section-title street-shadow">Women&apos;s rail.</h1>
+          <p className="mt-4 max-w-2xl text-[#f3efe5]/70">
+            Crop cuts, bright-file styling, and pieces built for the street archive.
+          </p>
+        </div>
         {womenProducts.length === 0 ? (
-          <p className="text-gray-300 text-center">No women&apos;s products available yet.</p>
+          <p className="text-center text-[#f3efe5]/70">No women&apos;s products available yet.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {womenProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

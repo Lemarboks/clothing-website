@@ -1,37 +1,33 @@
 export default function Footer() {
   return (
-    <footer className="bg-black border-t-2 border-orange-500 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6">
-          <p className="text-gray-300 text-sm mb-2">
-            © Copyright Street Wear Co. All rights reserved.
-          </p>
-          <p className="text-gray-400 text-xs max-w-4xl mx-auto">
-            Street Wear Co. is committed to providing quality urban fashion and excellent customer service.
+    <footer className="border-t border-[#f3efe5]/15 bg-[#080808] px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.8fr]">
+        <div>
+          <p className="kicker mb-3">Sench//Store</p>
+          <h2 className="section-title max-w-2xl text-[clamp(2rem,5vw,5rem)]">
+            Mzansi x LDN streetwear.
+          </h2>
+          <p className="mt-4 max-w-xl text-sm text-[#f3efe5]/65">
+            Copyright Street Wear Co. All rights reserved. Built as a shop rail
+            with a street-style magazine skin.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center space-x-6 text-sm">
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Street Wear Co.
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Privacy
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Dresses Glossary
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Sneakers Glossary
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Shop Glossary
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Furniture Glossary
-          </a>
-          <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-            Access to information
-          </a>
+        <div className="self-end">
+          <div className="issue-stripe mb-5 h-3" />
+          <div className="flex flex-wrap gap-4 text-[0.72rem] font-black uppercase tracking-[0.12em]">
+            <a href="#" className="text-[#f3efe5]/70 transition-colors hover:text-[#d8ff3f]">
+              Street Wear Co.
+            </a>
+            <a href="#" className="text-[#f3efe5]/70 transition-colors hover:text-[#d8ff3f]">
+              Privacy
+            </a>
+            <a href="#" className="text-[#f3efe5]/70 transition-colors hover:text-[#d8ff3f]">
+              Shop glossary
+            </a>
+            <a href="#" className="text-[#f3efe5]/70 transition-colors hover:text-[#d8ff3f]">
+              Access to information
+            </a>
+          </div>
         </div>
       </div>
     </footer>

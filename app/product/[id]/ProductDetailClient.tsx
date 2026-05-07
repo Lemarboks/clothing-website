@@ -21,57 +21,59 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="bg-gray-800 border-b border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div className="editorial-grid min-h-screen text-[#f3efe5]">
+      <div className="border-b border-[#f3efe5]/15 bg-[#080808]/75">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <button
             onClick={() => router.back()}
-            className="text-orange-400 hover:text-orange-300 transition-colors"
+            className="kicker transition-colors hover:text-[#f3efe5]"
           >
             Back
           </button>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
-            <div className="aspect-square relative">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="clip-frame rotate-[-1.5deg] overflow-hidden">
+            <div className="relative aspect-square bg-[#080808]">
+              <span className="issue-label absolute left-3 top-3 z-10">Product file {product.id}</span>
               <img
                 src={product.images[selectedColor]}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
 
           <div className="space-y-6">
             <div>
-              <h1 className="text-4xl font-bold text-white mb-2 street-shadow">
+              <p className="kicker mb-3">Mzansi x LDN / {product.gender}</p>
+              <h1 className="section-title street-shadow mb-3">
                 {product.name}
               </h1>
-              <p className="text-3xl font-bold text-orange-400">R{product.price}</p>
+              <p className="text-3xl font-black text-[#ffcd00]">R{product.price}</p>
             </div>
 
             <div>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="border-l-4 border-[#e34c38] pl-4 text-lg leading-relaxed text-[#f3efe5]/72">
                 {product.description}
               </p>
             </div>
 
             <div>
-              <label className="block text-lg font-semibold text-white mb-3">
+              <label className="mb-3 block text-lg font-black uppercase text-[#f3efe5]">
                 Color: {selectedColor}
               </label>
-              <div className="flex space-x-3">
+              <div className="flex flex-wrap gap-3">
                 {product.colors.map((color) => (
                   <button
                     key={color}
                     onClick={() => setSelectedColor(color)}
-                    className={`px-4 py-2 rounded-lg border-2 transition-all ${
+                    className={`border px-4 py-2 text-sm font-black uppercase tracking-[0.08em] transition-all ${
                       selectedColor === color
-                        ? 'border-orange-400 bg-orange-400 text-black font-semibold'
-                        : 'border-gray-600 text-gray-300 hover:border-gray-500'
+                        ? 'border-[#d8ff3f] bg-[#d8ff3f] text-[#080808]'
+                        : 'border-[#f3efe5]/25 text-[#f3efe5]/75 hover:border-[#f3efe5]/70'
                     }`}
                   >
                     {color}
@@ -81,7 +83,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             </div>
 
             <div>
-              <label className="block text-lg font-semibold text-white mb-3">
+              <label className="mb-3 block text-lg font-black uppercase text-[#f3efe5]">
                 Size: {selectedSize}
               </label>
               <div className="flex flex-wrap gap-3">
@@ -89,10 +91,10 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`px-4 py-2 rounded-lg border-2 transition-all ${
+                    className={`border px-4 py-2 text-sm font-black uppercase tracking-[0.08em] transition-all ${
                       selectedSize === size
-                        ? 'border-orange-400 bg-orange-400 text-black font-semibold'
-                        : 'border-gray-600 text-gray-300 hover:border-gray-500'
+                        ? 'border-[#d8ff3f] bg-[#d8ff3f] text-[#080808]'
+                        : 'border-[#f3efe5]/25 text-[#f3efe5]/75 hover:border-[#f3efe5]/70'
                     }`}
                   >
                     {size}
@@ -104,56 +106,56 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             <div className="pt-6">
               <button
                 onClick={handleAddToCart}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-4 px-8 rounded-lg transition-colors text-lg"
+                className="archive-button w-full justify-center py-4 text-lg"
               >
                 Add to Cart - R{product.price}
               </button>
             </div>
 
-            <div className="border-t border-gray-700 pt-6">
-              <h2 className="text-xl font-bold text-white mb-4">Size Guide</h2>
+            <div className="border-t border-[#f3efe5]/15 pt-6">
+              <h2 className="mb-4 text-xl font-black uppercase text-[#f3efe5]">Size Guide</h2>
               <div className="overflow-x-auto">
-                <table className="w-full text-sm text-gray-300">
+                <table className="w-full text-sm text-[#f3efe5]/72">
                   <thead>
-                    <tr className="border-b border-gray-600">
-                      <th className="text-left py-3 px-3 font-semibold text-white">Size</th>
-                      <th className="text-left py-3 px-3 font-semibold text-white">Bust (cm)</th>
-                      <th className="text-left py-3 px-3 font-semibold text-white">Height (cm)</th>
+                    <tr className="border-b border-[#f3efe5]/20">
+                      <th className="px-3 py-3 text-left font-black text-[#f3efe5]">Size</th>
+                      <th className="px-3 py-3 text-left font-black text-[#f3efe5]">Bust (cm)</th>
+                      <th className="px-3 py-3 text-left font-black text-[#f3efe5]">Height (cm)</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-gray-700 hover:bg-gray-800 transition-colors">
-                      <td className="py-3 px-3 font-semibold text-orange-400">S</td>
-                      <td className="py-3 px-3">90-95</td>
-                      <td className="py-3 px-3">170-175</td>
+                    <tr className="border-b border-[#f3efe5]/10 transition-colors hover:bg-[#f3efe5]/5">
+                      <td className="px-3 py-3 font-black text-[#ffcd00]">S</td>
+                      <td className="px-3 py-3">90-95</td>
+                      <td className="px-3 py-3">170-175</td>
                     </tr>
-                    <tr className="border-b border-gray-700 hover:bg-gray-800 transition-colors">
-                      <td className="py-3 px-3 font-semibold text-orange-400">M</td>
-                      <td className="py-3 px-3">100-105</td>
-                      <td className="py-3 px-3">180-185</td>
+                    <tr className="border-b border-[#f3efe5]/10 transition-colors hover:bg-[#f3efe5]/5">
+                      <td className="px-3 py-3 font-black text-[#ffcd00]">M</td>
+                      <td className="px-3 py-3">100-105</td>
+                      <td className="px-3 py-3">180-185</td>
                     </tr>
-                    <tr className="border-b border-gray-700 hover:bg-gray-800 transition-colors">
-                      <td className="py-3 px-3 font-semibold text-orange-400">L</td>
-                      <td className="py-3 px-3">110-115</td>
-                      <td className="py-3 px-3">185-190</td>
+                    <tr className="border-b border-[#f3efe5]/10 transition-colors hover:bg-[#f3efe5]/5">
+                      <td className="px-3 py-3 font-black text-[#ffcd00]">L</td>
+                      <td className="px-3 py-3">110-115</td>
+                      <td className="px-3 py-3">185-190</td>
                     </tr>
-                    <tr className="hover:bg-gray-800 transition-colors">
-                      <td className="py-3 px-3 font-semibold text-orange-400">XL</td>
-                      <td className="py-3 px-3">120-125</td>
-                      <td className="py-3 px-3">190-195</td>
+                    <tr className="transition-colors hover:bg-[#f3efe5]/5">
+                      <td className="px-3 py-3 font-black text-[#ffcd00]">XL</td>
+                      <td className="px-3 py-3">120-125</td>
+                      <td className="px-3 py-3">190-195</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            <div className="border-t border-gray-700 pt-6">
-              <div className="grid grid-cols-2 gap-4 text-sm text-gray-400">
+            <div className="border-t border-[#f3efe5]/15 pt-6">
+              <div className="grid grid-cols-2 gap-4 text-sm text-[#f3efe5]/60">
                 <div>
-                  <span className="font-semibold text-white">Gender:</span> {product.gender}
+                  <span className="font-black uppercase text-[#f3efe5]">Gender:</span> {product.gender}
                 </div>
                 <div>
-                  <span className="font-semibold text-white">ID:</span> {product.id}
+                  <span className="font-black uppercase text-[#f3efe5]">ID:</span> {product.id}
                 </div>
               </div>
             </div>
