@@ -72,4 +72,19 @@ export const products: Product[] = [
     colors: ['Gray', 'Black', 'Navy'],
     gender: 'men',
   },
+  {
+    id: '6',
+    name: 'Vintage Plaid Long Sleeve Jacket',
+    price: 79.99,
+    images: {
+      Blue: asset('/plaid-jacket-blue.svg'),
+      Black: asset('/plaid-jacket-black.svg'),
+      Khaki: asset('/plaid-jacket-khaki.svg'),
+      Pink: asset('/plaid-jacket-pink.svg'),
+    },
+    description: 'Vintage-inspired plaid zip jacket with a loose streetwear fit and long sleeves.',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Blue', 'Black', 'Khaki', 'Pink'],
+    gender: 'unisex',
+  },
 ];
